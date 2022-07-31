@@ -405,17 +405,12 @@ img {
 </div>
 <script>
 
-window.android = {};
-window.android.onIconClicked = function(station, line) {
+onIconClicked = function(station, line) {
 alert('아이콘: ' + station, line);
 };
-window.android.onTextClicked = function(element, line) {
+onTextClicked = function(element, line) {
 alert('글자: ' + element.innerHTML.replace(/(<([^>]+)>)/g, ''));
 };
-
-var onIconClicked = window.android.onIconClicked;
-var onTextClicked = window.android.onTextClicked;
-
 
 </script>
 </body>
