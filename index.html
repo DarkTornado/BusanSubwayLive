@@ -405,10 +405,10 @@ img {
 </div>
 <script>
 
-onIconClicked = function(station, line) {
+function onIconClicked(station, line) {
 alert('아이콘: ' + station, line);
 };
-onTextClicked = function(element, line) {
+function onTextClicked(element, line) {
 alert('글자: ' + element.innerHTML.replace(/(<([^>]+)>)/g, ''));
 };
 
