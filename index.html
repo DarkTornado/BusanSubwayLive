@@ -69,7 +69,7 @@ img {
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
 <div>
 
-<svg width="5000" height="4000" viewBox="0 0 5000 4000">
+<svg id="map" width="5000" height="4000" viewBox="0 0 5000 4000">
 
 <!-- 1호선 -->
 <polyline points="
@@ -89,7 +89,7 @@ img {
 	" fill="none" stroke="#217DCB" />
 <!-- 동해선 -->
 <polyline points="
-    2600,1800 2800,1600 4000,1600 4500,1100 4500,600 4800,300
+    2600,2200 2600,1800 2800,1600 4000,1600 4500,1100 4500,600 4800,300
 	" fill="none" stroke="#0054A6" />
 <!-- 부산김해경전철 -->
 <polyline points="
@@ -322,6 +322,10 @@ img {
 <text x=4030 y=200 onClick="onTextClicked(this);" class=left>안평</text>
 
 <!-- 동해선 -->
+<circle cx="2600" cy="2200" r="15" onClick="onIconClicked('부전');" />
+<text x=2570 y=2200 onClick="onTextClicked(this);" class=right>부전</text>
+<circle cx="2600" cy="2000" r="15" onClick="onIconClicked('거제해맞이');" />
+<text x=2570 y=2000 onClick="onTextClicked(this);" class=right>거제해맞이</text>
 <circle cx="3000" cy="1600" r="15" onClick="onIconClicked('동래');" />
 <text x=3000 y=1650 onClick="onTextClicked(this);">동래</text>
 <circle cx="3200" cy="1600" r="15" onClick="onIconClicked('안락');" />
@@ -360,7 +364,6 @@ img {
 <text x=4830 y=320 onClick="onTextClicked(this);" class=left>태화강</text>
 
 <!-- 부산김해경전철 -->
-
 <circle cx="1450" cy="2600" r="15" onClick="onIconClicked('괘법르네시떼');" />
 <text x=1450 y=2550 onClick="onTextClicked(this);">괘법르네시떼</text>
 <circle cx="1200" cy="2600" r="15" onClick="onIconClicked('서부산유통지구');" />
