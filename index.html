@@ -74,7 +74,7 @@ img {
 <!-- 1호선 -->
 <polyline points="
     2800,240 2800,2600 2100,3300 1200,3300 300,2400 300,2100
-	" fill="none" stroke="#f06A00" />
+	" fill="none" stroke="#F06A00" />
 <!-- 2호선 -->
 <polyline points="
     1200,300 1200,2100 1700,2600 2800,2600 3100,2600 3600,2100 3600,1800 3800,1800 4000,1600 4800,1600
@@ -773,10 +773,10 @@ document.getElementById("map").innerHTML = map + src;
 update();
 
 function train(x, y, dir, line){
-var dirs = ['up', 'down', 'left', 'right'];
+var dirs = [0, 180, 270, 90];
 x -= 20;
 y -= 20;
-return "<image xlink:href='images/"+dirs[dir]+"_"+line+".png' x='"+x+"' y='"+y+"' width='40px'/>";
+return "<image xlink:href='images/"+line+".svg' x='"+x+"' y='"+y+"' width='40px' transform='rotate("+dirs[dir]+","+(x+20)+","+(y+20)+")'/>";
 }
 
 
