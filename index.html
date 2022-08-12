@@ -69,7 +69,7 @@ img {
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
 <div>
 
-<svg id="map" width="5000" height="4000" viewBox="0 0 5000 4000">
+<svg id="map" width="5000" height="3500" viewBox="0 0 5000 3500">
 <!-- 노선도 종류 -->
 <text class=title x=70 y=140>부산 도시철도 노선도</text>
 
@@ -77,26 +77,43 @@ img {
 <polyline points="
     2800,240 2800,2600 2100,3300 1200,3300 300,2400 300,2100
 	" fill="none" stroke="#F06A00" />
+<text class=line_name style='fill:#F06A00;' x=2800 y=150>1호선</text>
+<text class=line_name style='fill:#F06A00;' x=300 y=2000>1호선</text>
+
 <!-- 2호선 -->
 <polyline points="
     1200,300 1200,2100 1700,2600 2800,2600 3100,2600 3600,2100 3600,1800 3800,1800 4000,1600 4800,1600
 	" fill="none" stroke="#81BF48" />
+<text class=line_name style='fill:#81BF48;' x=1050 y=400>2호선</text>
+<text class=line_name style='fill:#81BF48;' x=4800 y=1500>2호선</text>
+
 <!-- 3호선 -->
 <polyline points="
     400,1800 3600,1800
 	" fill="none" stroke="#BB8C00" />
+<text class=line_name style='fill:#BB8C00;' x=600 y=1700>3호선</text>
+<text class=line_name style='fill:#BB8C00;' x=3450 y=1950>3호선</text>
+
 <!-- 4호선 -->
 <polyline points="
     2000,1800 2400,1400 2800,1400 3600,1400 4000,1000 4000,200
 	" fill="none" stroke="#217DCB" />
+<text class=line_name style='fill:#217DCB;' x=2300 y=1700>4호선</text>
+<text class=line_name style='fill:#217DCB;' x=4000 y=100>4호선</text>
+
 <!-- 동해선 -->
 <polyline points="
     2600,2200 2600,1800 2800,1600 4000,1600 4500,1100 4500,600 4800,300
 	" fill="none" stroke="#0054A6" />
+<text class=line_name style='fill:#0054A6;' x=2600 y=2300>동해선</text>
+<text class=line_name style='fill:#0054A6;' x=4600 y=300>동해선</text>
+
 <!-- 부산김해경전철 -->
 <polyline points="
     400,400 400,1800 1200,2600 1700,2600
 	" fill="none" stroke="#875CAC" />
+<text class=line_name style='fill:#875CAC;' x=1450 y=2750>부산김해경전철</text>
+<text class=line_name style='fill:#875CAC;' x=400 y=300>부산김해경전철</text>
 
 
 <!-- 1호선 -->
@@ -404,6 +421,11 @@ img {
 <text x=430 y=500 onClick="onTextClicked(this);" class=left>장신대</text>
 <circle cx="400" cy="400" r="15" onClick="onIconClicked('가야대');" />
 <text x=430 y=400 onClick="onTextClicked(this);" class=left>가야대</text>
+
+
+<!-- 저작권 표시 -->
+<text x=20 y=3480 class=left>이 벡터 이미지에는 네이버에서 제공한 나눔글꼴이 적용되어 있습니다.</text>
+<text x=4980 y=3480 class='right bold'>© 2022 Dark Tornado, All rights reserved.</text>
 
 </svg>
 
