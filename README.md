@@ -1,7 +1,7 @@
 # 시간표 기반 부산 도시철도 운행 정보
 © 2022-2023 Dark Tornado, All rights reserved.
 
-* [여기서](https://darktornado.github.io/BusanSubwayLive/) 만드는 중인거 구경 가능
+* [여기서](https://darktornado.github.io/BusanSubwayLive/) 구경 가능
 
 ## 라이선스
 * [Deep Dark License - Type C](LICENSE.md)
