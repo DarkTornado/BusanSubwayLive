@@ -327,58 +327,52 @@ var pos = [
 const map = document.getElementById("map").innerHTML;
 
 function update() {
-var req = new XMLHttpRequest();
-req.open('GET', 'https://api.darktornado.net/subway/busan');
-req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-//req.setRequestHeader('Cache-Control', 'no-cache');
-req.send();
-req.onreadystatechange = function(e) {
-    if (this.readyState == 4 && req.status === 200) {
-        data = (req.responseText + '').trim();
-        if (data != '') {
-            applyData(data);
+    var req = new XMLHttpRequest();
+    req.open('GET', 'https://api.darktornado.net/subway/busan');
+    req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    req.send();
+    req.onreadystatechange = function(e) {
+        if (this.readyState == 4 && req.status === 200) {
+            data = (req.responseText + '').trim();
+            if (data != '') {
+                applyData(data);
+            }
+        } else {
+            //alert(e);
         }
-    } else {
-        //alert(e);
-    }
-};
+    };
 }
 
-function applyData(data){
-var src = '';
-var lines = [1, 2, 3, 4, 11, 12];
-data = JSON.parse(data);
-/*
-data[4].forEach((e, j) => {
-data[4][j].up = 'a';
-data[4][j].down = 'a';
-});
-*/
-data.forEach((arr, i) => {
-var m = 0;
-for(var n=0;n<arr.length;n++) {
-if(arr[n].up) src += train(pos[i][m].x, pos[i][m].y, pos[i][m].dir, lines[i]);
-m++;
-if(arr[n].down) src += train(pos[i][m].x, pos[i][m].y, pos[i][m].dir, lines[i]);
-m++;
-}
-});
-document.getElementById("map").innerHTML = map + src;
+function applyData(data) {
+    var src = '';
+    var lines = [1, 2, 3, 4, 11, 12];
+    data = JSON.parse(data);
+    data.forEach((arr, i) => {
+        var m = 0;
+        for (var n = 0; n < arr.length; n++) {
+            if (arr[n].up) src += train(pos[i][m].x, pos[i][m].y, pos[i][m].dir, lines[i]);
+            m++;
+            if (arr[n].down) src += train(pos[i][m].x, pos[i][m].y, pos[i][m].dir, lines[i]);
+            m++;
+        }
+    });
+    document.getElementById("map").innerHTML = map + src;
 }
 update();
 
-function train(x, y, dir, line){
-var dirs = [0, 180, 270, 90, 315, 135, 225, 45];
-x -= 20;
-y -= 20;
-return "<image xlink:href='images/"+line+".svg' x='"+x+"' y='"+y+"' width='40px' transform='rotate("+dirs[dir]+","+(x+20)+","+(y+20)+")'/>";
+function train(x, y, dir, line) {
+    var dirs = [0, 180, 270, 90, 315, 135, 225, 45];
+    x -= 20;
+    y -= 20;
+    return "<image xlink:href='images/" + line + ".svg' x='" + x + "' y='" + y + "' width='40px' transform='rotate(" + dirs[dir] + "," + (x + 20) + "," + (y + 20) + ")'/>";
 }
 
 
 function onIconClicked(station) {
-alert('아이콘: ' + station);
+    alert('아이콘: ' + station);
 }
 
 function onTextClicked(element) {
-alert('글자: ' + element.innerHTML.replace(/(<([^>]+)>)/g, ''));
+    alert('글자: ' + element.innerHTML.replace(/(<([^>]+)>)/g, ''));
 }
+
