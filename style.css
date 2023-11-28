@@ -1,0 +1,52 @@
+.bold {
+  font-family: NanumSquareBold;
+}
+.left {
+  text-anchor: start;
+}
+.right {
+  text-anchor: end;
+}
+body {
+  font-family: NanumSquare;
+  margin: 0px;
+  font-size: 40px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+polyline, polygon, line {
+  stroke-width: 15;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+circle {
+  fill: #FFFFFF;
+  stroke : #000000;
+  stroke-width: 3;
+}
+circle.exp {
+  fill: #FFFF00;
+}
+text {
+  font-size: 40px;
+}
+text.line_name {
+  font-family: NanumSquareBold;
+  font-size: 70px;
+}
+text.title {
+  text-anchor: start;
+  font-family: NanumSquareExtraBold;
+  font-size: 150px;
+}
+polygon.index {
+  stroke-width: 10px;
+}
+text.index {
+  text-anchor: start;
+  font-family: NanumSquareBold;
+  font-size: 50px;
+}
+img {
+  opacity: 0.5;
+}
