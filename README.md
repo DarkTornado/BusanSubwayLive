@@ -6,14 +6,6 @@
 ## 라이선스
 * [Deep Dark License - Type C](LICENSE.md)
 
-## To do
-- [x] 1호선
-- [x] 2호선
-- [x] 3호선
-- [x] 4호선
-- [x] 동해선
-- [x] 부산김해경전철
-
 ## 기타 비슷한 것
 - [수도권 전철 노선도 벡터 이미지](https://github.com/DarkTornado/MetroMapSVG)
 - [시간표 기반 대구 도시철도 운행정보](https://github.com/DarkTornado/dtro)
